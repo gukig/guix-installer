@@ -48,3 +48,6 @@ jobs:
           tag_name: v${{ env.RELEASE_TAG }}
           body_path: release-notes.md
           files: guix-installer-${{ env.RELEASE_TAG }}.iso
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          GITHUB_REPOSITORY: gukig/guix-installer
